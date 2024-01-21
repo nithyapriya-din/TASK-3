@@ -1,0 +1,230 @@
+1.FOR  THE GIVEN JSON ITERATE OVER ALL FOR LOOPS (for, for in, for of, forEach):
+
+     *1.The ‘For’ Loop:
+The For Loop comes first because of its simplicity and ease of use. It is a very user-friendly kind of loop that runs with a method of using a counter. 
+The value is first set with an appropriate condition, which is also called ‘initializing a loop’. Next, the terminal or final value is specified. The For Loop makes things really easy when you need to run a set of codes multiple times.
+The For Loop is further divided into:‍
+1. Using an array
+The following piece of code is a perfect example of how to use a for loop through an array. 
+var numbers = [ 10, 20, 30, 40, 50] 
+for (var i=0; i < numbers.length; i++) {
+   console.log(numbers[i])
+}
+‍
+
+Here, I have used all the numbers in the form of an array, then printed each of them in a console window. In the same way, you can make a loop through an array of strings.
+2. Making a loop through DOM elements
+The For loop can also be used to alter colors. Consider a situation where you want to choose a particular color for all the anchors of your page. In order to do so, use the following piece of code.
+ 
+var elements = document.querySelectorAll("a");
+for (var i=0; i<elements.length; i++) {
+   elements[i].style.color = "red";
+}
+‍
+When you look at the above code, things might not seem very clear. 
+I first used `document.querySelectorAll("a")` to get all of my anchors in the array format. Once that was done, the next step looped all the array and changed its color.
+2. For In’ Loop:
+Another way of looping is the For In Loop. Unlike the For Loop, this loop won’t be using a counter. So this makes the whole process even more simple and hassle-free. In fact, the For In Loop is essentially a simplified version of the For Loop.
+The following are different ways of looping using the For In technique.
+1. Looping through an Object Property
+Here’s an example; you’ve got an object containing some properties and you need to look up each property and the value that it carries. Here’s how you would use the For In Loop to do so:
+var person = {
+   fname: "Nick",
+   lname: "Jonas",
+   age: 26
+}; 
+for (let x in person) {
+   console.log(x + ": "+ person[x])
+}
+‍
+
+
+Looping Using JSON
+JSON stands for JavaScript Object Notation. It’s a light format for storing and transferring data from one place to another. So in looping, it is one of the most commonly used techniques for transporting data that is the array format or in attribute values. 
+Here’s an example that demonstrates the above concept.
+jsonData ={
+   one: [11, 12, 13, 14, 15],
+   two: [21, 22, 23],
+   three: [31, 32]
+}
+‍
+
+
+JavaScript Object Notation also consists of a root, namely, the jsonData. It further contains three nodes that are called, “one”, “two”, and “three”. 
+3.FOR EACH: 
+In the next example we retrieve data with a GET request using fetch API. We loop over the returned data with forEach.
+index.html
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+
+
+<body>
+
+
+    <button id="log">Log</button>
+
+
+    <script src="main.js"></script>
+</body>
+
+
+</html>
+
+
+This is the index.html page. By clicking on the Log button, we fetch the data from the JSON server test data and log it into the browser console.
+4. FOR OF:
+The for...in statement is useful for iterating over object properties, but to iterate over iterable objects like arrays and strings, we can use the for...of statement. The for...of statement is a newer feature as of ECMAScript 6. ECMAScript (or ES) is a scripting-language specification created to standardize JavaScript.
+In this example of a for...of loop, we will create an array and print each item in the array to the console.
+
+
+// Initialize array of shark species
+let sharks = [ "great white", "tiger", "hammerhead" ];
+
+
+// Print out each type of shark
+for (let shark of sharks) {
+	console.log(shark);
+}
+
+
+2.CREATE  YOUR OWN RESUME DATA IN JSON FORMAT:
+{
+  "basics": {
+    "name": "John Doe",
+    "label": "Programmer",
+    "image": "",
+    "email": "john@gmail.com",
+    "phone": "(912) 555-4321",
+    "url": "https://johndoe.com",
+    "summary": "A summary of John Doe…",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
+    "profiles": [{
+      "network": "Twitter",
+      "username": "john",
+      "url": "https://twitter.com/john"
+    }]
+  },
+  "work": [{
+    "name": "Company",
+    "position": "President",
+    "url": "https://company.com",
+    "startDate": "2013-01-01",
+    "endDate": "2014-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Started the company"
+    ]
+  }],
+  "volunteer": [{
+    "organization": "Organization",
+    "position": "Volunteer",
+    "url": "https://organization.com/",
+    "startDate": "2012-01-01",
+    "endDate": "2013-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Awarded 'Volunteer of the Month'"
+    ]
+  }],
+  "education": [{
+    "institution": "University",
+    "url": "https://institution.com/",
+    "area": "Software Development",
+    "studyType": "Bachelor",
+    "startDate": "2011-01-01",
+    "endDate": "2013-01-01",
+    "score": "4.0",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "certificates": [{
+    "name": "Certificate",
+    "date": "2021-11-07",
+    "issuer": "Company",
+    "url": "https://certificate.com"
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Master",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  }],
+  "languages": [{
+    "language": "English",
+    "fluency": "Native speaker"
+  }],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [{
+    "name": "Project",
+    "startDate": "2019-01-01",
+    "endDate": "2021-01-01",
+    "summary": "Summary...",
+    "highlights": [
+      "Won award at AIHacks 2016"
+    ],
+    "url": "https://project.com/"
+  }]
+}
+3.READ ABOUT THE DIFFERENCE BETWEEN WINDOW,SCREEN, AND DOCUMENT IN JAVASCRIPT:
+*JavaScript: window, document and screen
+Window
+The JavaScript window object sits at the top of the JavaScript Object hierarchy and represents the browser window. The window object is supported by all browsers. All global JavaScript objects , functions, and variables automatically become members of the window object. The window is the first thing that gets loaded into the browser . This window object has the majority of the properties like length, innerWidth, innerHeight, name, if it has been closed, its parents, and more.
+The window object represents the current browsing context . It holds things like window.location, window.history, window.screen, window.status, or the window.document . Each browser tab has its own top-level window object. Each of these windows gets its own separate global object. window.window always refers to window, but window.parent and window.top might refer to enclosing windows, giving access to other execution contexts. Moreover, the window property of a window object points to the window object itself. So the following ststements all return the same window object:
+window.window window.window.window window.window.window.window ...
+Document
+The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. When an HTML document is loaded into a web browser , it becomes a document object. It is the root node of the HTML document. The document actually gets loaded inside the window object and has properties available to it like title, URL, cookie, etc. HTML documents, served with the "text/html" content type, also implement the HTMLDocument interface, whereas XML and SVG documents implement the XMLDocument interface.
+Screen
+Screen is a small information object about physical screen dimensions . It can be used to display screen width, height, colorDepth, pixelDepth etc. It is not mandatory to write window prefix with screen object. It can be written without window prefix.
+
+
+
+
+
+
+ 
+
+
+
+
+
+
